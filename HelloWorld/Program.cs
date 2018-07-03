@@ -11,16 +11,18 @@ namespace HelloWorld
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to this forecast application!");
 
-            Console.WriteLine("Press any key to proceed: ");
+            Console.WriteLine("Press enter to load forecast data: ");
             Console.ReadKey();
-
-            Console.WriteLine("Press enter to display forecast data: ");
-            Console.ReadKey();
+            Console.WriteLine("\n");
 
             AcquireForecastData data = new AcquireForecastData();
-            data.AcquireData();
+            //data.AcquireData();
+            data.AcquireAndUpdateData();
+            data.DisplayForecast();
+
+            data = null;
 
             Console.WriteLine("Press any key to exit: ");
             Console.ReadKey();
